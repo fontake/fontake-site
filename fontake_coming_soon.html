@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fontake — Coming Soon</title>
+  <meta name="description" content="Fontakeは、文字を3Dモデル（STL）に変換できる次世代ツールです。/ Fontake turns text into 3D-printable STL files." />
+  <meta property="og:title" content="Fontake — Coming Soon" />
+  <meta property="og:description" content="Turn text into 3D. Coming soon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fontake.com/" />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root{
+      --bg:#0f0f12;
+      --fg:#f7f7fb;
+      --muted:#b9bcc6;
+      --card:#15161b;
+      --accent:#6ae1a7;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans JP","Hiragino Kaku Gothic ProN","Meiryo",sans-serif}
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px}
+    .card{max-width:780px;width:100%;background:var(--card);border-radius:24px;padding:28px 24px;box-shadow:0 10px 30px rgba(0,0,0,.3);}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#39b3ff);display:grid;place-items:center;font-weight:800;color:#0b1020}
+    .title{font-size:1.35rem;font-weight:800;letter-spacing:.2px}
+    .lang{display:flex;gap:8px}
+    .lang button{background:transparent;color:var(--fg);border:1px solid #2a2d36;border-radius:999px;padding:8px 12px;cursor:pointer}
+    .lang button.active{background:var(--fg);color:#0b1020;border-color:var(--fg);font-weight:700}
+    .hero{padding:6px 2px 18px}
+    .headline{font-size:2.1rem;line-height:1.2;margin:8px 0 8px}
+    .sub{color:var(--muted);font-size:1.05rem;line-height:1.6;margin:0 0 18px}
+    .soon{display:inline-block;background:#1d2028;border:1px solid #2a2d36;padding:8px 12px;border-radius:999px;font-weight:700;margin-bottom:16px}
+    .cta{margin-top:6px}
+    .cta input[type="email"]{width:100%;max-width:420px;padding:12px 14px;border-radius:12px;border:1px solid #2a2d36;background:#0f1116;color:var(--fg);margin-right:8px;margin-bottom:10px}
+    .cta button{padding:12px 16px;border-radius:12px;border:none;background:var(--accent);color:#0b1020;font-weight:800;cursor:pointer}
+    .grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px}
+    .note{font-size:.95rem;color:var(--muted)}
+    .hr{height:1px;background:#22242c;margin:16px 0}
+    footer{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;color:var(--muted);font-size:.9rem}
+    .links a{color:var(--muted);text-decoration:none;border-bottom:1px dotted #3a3e4a}
+    .iframebox{width:100%;max-width:560px;height:420px;border:1px solid #2a2d36;border-radius:16px;overflow:hidden;background:#0f1116;display:none}
+    .hidden{display:none}
+    @media (min-width:720px){
+      .grid{grid-template-columns:1.3fr .7fr}
+      .headline{font-size:2.4rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="brand">
+          <div class="logo">F</div>
+          <div class="title">Fontake</div>
+        </div>
+        <nav class="lang" aria-label="Language switcher">
+          <button id="btnJA" class="active" aria-pressed="true">🇯🇵 日本語</button>
+          <button id="btnEN" aria-pressed="false">🇬🇧 English</button>
+        </nav>
+      </header>
+
+      <!-- JA section -->
+      <section id="secJA" lang="ja">
+        <div class="hero">
+          <span class="soon">🚀 近日公開予定</span>
+          <h1 class="headline">文字を立体に。</h1>
+          <p class="sub">
+            Fontakeは、誰でも簡単に文字を3Dモデル（STL）に変換し、3Dプリントできるようにするサービスです。
+            まずは無料で使えるベータ版から提供予定です。最新情報をメールでお届けします。
+          </p>
+          <div class="grid">
+            <div>
+              <form class="cta" action="#" method="post" onsubmit="return false">
+                <input type="email" name="email" placeholder="メールアドレスを入力" required />
+                <button type="button" onclick="openForm()">通知を受け取る</button>
+                <p class="note">※ ボタンを押すと登録フォームが開きます（Googleフォーム等を埋め込み）</p>
+              </form>
+            </div>
+            <div class="iframebox" id="formFrameJA" aria-label="メール登録フォーム（日本語）">
+              <!-- ▼▼ Googleフォームの埋め込みURLに差し替えてください ▼▼ -->
+              <!-- 例）<iframe src="https://docs.google.com/forms/d/e/xxxxxx/viewform?embedded=true" width="100%" height="100%" frameborder="0">読み込んでいます…</iframe> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EN section -->
+      <section id="secEN" lang="en" class="hidden">
+        <div class="hero">
+          <span class="soon">🚀 Coming Soon</span>
+          <h1 class="headline">Turn text into 3D.</h1>
+          <p class="sub">
+            Fontake lets anyone convert text into 3D models (STL) ready for printing.
+            We'll launch with a free beta. Join the list to get updates.
+          </p>
+          <div class="grid">
+            <div>
+              <form class="cta" action="#" method="post" onsubmit="return false">
+                <input type="email" name="email" placeholder="Your email address" required />
+                <button type="button" onclick="openForm()">Get notified</button>
+                <p class="note">A sign-up form (e.g., Google Forms or Mailchimp) will open below.</p>
+              </form>
+            </div>
+            <div class="iframebox" id="formFrameEN" aria-label="Email sign-up form (English)">
+              <!-- ▼▼ Replace with your embedded form URL ▼▼ -->
+              <!-- e.g., <iframe src="https://docs.google.com/forms/d/e/xxxxxx/viewform?embedded=true" width="100%" height="100%" frameborder="0">Loading…</iframe> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="hr"></div>
+      <footer>
+        <div>© <span id="year"></span> Fontake</div>
+        <div class="links">
+          <a href="#" onclick="alert('利用規約ページは後日公開予定です。/ Terms will be added soon.'); return false;">利用規約 / Terms</a>
+          &nbsp;·&nbsp;
+          <a href="#" onclick="alert('プライバシーポリシーは後日公開予定です。/ Privacy Policy will be added soon.'); return false;">プライバシー / Privacy</a>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    const btnJA = document.getElementById('btnJA');
+    const btnEN = document.getElementById('btnEN');
+    const secJA = document.getElementById('secJA');
+    const secEN = document.getElementById('secEN');
+    const y = document.getElementById('year');
+    y.textContent = new Date().getFullYear();
+
+    function setLang(lang){
+      const isJA = lang === 'ja';
+      secJA.classList.toggle('hidden', !isJA);
+      secEN.classList.toggle('hidden', isJA);
+      btnJA.classList.toggle('active', isJA);
+      btnEN.classList.toggle('active', !isJA);
+      btnJA.setAttribute('aria-pressed', isJA ? 'true' : 'false');
+      btnEN.setAttribute('aria-pressed', !isJA ? 'true' : 'false');
+      document.documentElement.setAttribute('lang', isJA ? 'ja' : 'en');
+    }
+    btnJA.addEventListener('click', ()=>setLang('ja'));
+    btnEN.addEventListener('click', ()=>setLang('en'));
+
+    function openForm(){
+      // Show the appropriate iframe box for the active language.
+      const isJA = !secJA.classList.contains('hidden');
+      const box = isJA ? document.getElementById('formFrameJA') : document.getElementById('formFrameEN');
+      box.style.display = 'block';
+      // If you prefer redirecting to an external form instead, replace with: window.open('YOUR_FORM_URL', '_blank');
+    }
+  </script>
+</body>
+</html>
