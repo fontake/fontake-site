@@ -41,8 +41,6 @@
     .hr{height:1px;background:#22242c;margin:16px 0}
     footer{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;color:var(--muted);font-size:.9rem}
     .links a{color:var(--muted);text-decoration:none;border-bottom:1px dotted #3a3e4a}
-    .iframebox{width:100%;max-width:560px;height:420px;border:1px solid #2a2d36;border-radius:16px;overflow:hidden;background:#0f1116;display:none}
-    .hidden{display:none}
     @media (min-width:720px){
       .grid{grid-template-columns:1.3fr .7fr}
       .headline{font-size:2.4rem}
@@ -74,15 +72,12 @@
           </p>
           <div class="grid">
             <div>
-              <form class="cta" action="#" method="post" onsubmit="return false">
+              <!-- ▼ Formspreeフォーム ▼ -->
+              <form class="cta" action="https://formspree.io/f/mandqgyn" method="POST">
                 <input type="email" name="email" placeholder="メールアドレスを入力" required />
-                <button type="button" onclick="openForm()">通知を受け取る</button>
-                <p class="note">※ ボタンを押すと登録フォームが開きます（Googleフォーム等を埋め込み）</p>
+                <button type="submit">通知を受け取る</button>
               </form>
-            </div>
-            <div class="iframebox" id="formFrameJA" aria-label="メール登録フォーム（日本語）">
-              <!-- ▼▼ Googleフォームの埋め込みURLに差し替えてください ▼▼ -->
-              <!-- 例）<iframe src="https://docs.google.com/forms/d/e/xxxxxx/viewform?embedded=true" width="100%" height="100%" frameborder="0">読み込んでいます…</iframe> -->
+              <p class="note">メールアドレスを入力すると、Fontakeの最新情報をお送りします。</p>
             </div>
           </div>
         </div>
@@ -99,15 +94,12 @@
           </p>
           <div class="grid">
             <div>
-              <form class="cta" action="#" method="post" onsubmit="return false">
+              <!-- ▼ Formspreeフォーム (EN) ▼ -->
+              <form class="cta" action="https://formspree.io/f/mandqgyn" method="POST">
                 <input type="email" name="email" placeholder="Your email address" required />
-                <button type="button" onclick="openForm()">Get notified</button>
-                <p class="note">A sign-up form (e.g., Google Forms or Mailchimp) will open below.</p>
+                <button type="submit">Get notified</button>
               </form>
-            </div>
-            <div class="iframebox" id="formFrameEN" aria-label="Email sign-up form (English)">
-              <!-- ▼▼ Replace with your embedded form URL ▼▼ -->
-              <!-- e.g., <iframe src="https://docs.google.com/forms/d/e/xxxxxx/viewform?embedded=true" width="100%" height="100%" frameborder="0">Loading…</iframe> -->
+              <p class="note">Enter your email to get the latest updates from Fontake.</p>
             </div>
           </div>
         </div>
@@ -145,14 +137,6 @@
     }
     btnJA.addEventListener('click', ()=>setLang('ja'));
     btnEN.addEventListener('click', ()=>setLang('en'));
-
-    function openForm(){
-      // Show the appropriate iframe box for the active language.
-      const isJA = !secJA.classList.contains('hidden');
-      const box = isJA ? document.getElementById('formFrameJA') : document.getElementById('formFrameEN');
-      box.style.display = 'block';
-      // If you prefer redirecting to an external form instead, replace with: window.open('YOUR_FORM_URL', '_blank');
-    }
   </script>
 </body>
 </html>
