@@ -43,6 +43,13 @@
       .grid{ grid-template-columns:1.3fr .7fr }
       .headline{ font-size:2.4rem }
     }
+    
+    .social-links { display: flex; gap: 14px; }
+    .social-links a { font-size: 28px; text-decoration: none; transition: opacity 0.2s ease; }
+    .social-links a.twitter { color: #1DA1F2; }   /* Twitter公式ブルー */
+    .social-links a.instagram { color: #E4405F; } /* Instagram公式ピンク */
+    .social-links a:hover { opacity: 0.7; }
+    
   </style>
 </head>
 <body>
@@ -108,6 +115,11 @@
           <a href="#" onclick="alert('利用規約ページは後日公開予定です。/ Terms will be added soon.'); return false;">利用規約 / Terms</a>
           &nbsp;·&nbsp;
           <a href="#" onclick="alert('プライバシーポリシーは後日公開予定です。/ Privacy Policy will be added soon.'); return false;">プライバシー / Privacy</a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://twitter.com/fontake" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/fontake" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
         </div>
       </footer>
     </div>
