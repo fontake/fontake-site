@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fontake.com/sitemap.xml
